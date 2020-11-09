@@ -14,7 +14,11 @@ async function getGifs() {
 }
 
 function addGif(res) {
-    
+    //get number of results (array)
+    //select a random index from the number of results
+    // create a new LI, append to UL#gifs
+    // create a new IMG, append to LI
+
 }
 
 
