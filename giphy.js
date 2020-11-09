@@ -3,6 +3,9 @@
 // create new LI, set the properties of the LI based on the form value
 // 
 
+const ul = document.getElementById('#gifs');
+const searchForm = document.getElementById('#description');
+
 async function getGifs() {
     const res = await axios.get(`http://api.giphy.com/v1/gifs/search`, { params: 
         { q: search, api_key: 'MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym' } });
@@ -10,7 +13,9 @@ async function getGifs() {
     console.log(res);
 }
 
-
+function addGif(res) {
+    
+}
 
 
 
