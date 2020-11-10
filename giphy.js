@@ -6,10 +6,11 @@
 const ul = document.getElementById('#gifs');
 const searchForm = document.getElementById('#description');
 
-async function getGifs() {
+async function getGifs(search) {
     const res = await axios.get(`http://api.giphy.com/v1/gifs/search`, { params: 
-        { q: search, api_key: 'MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym' } });
-
+        { q: searchTerm, api_key: 'MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym' } });
+        //pass argument to function via value in the form    
+    
     console.log(res);
 }
 
