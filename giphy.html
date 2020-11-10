@@ -17,9 +17,11 @@
             <div class="container">
                 <div class="row">
                     <div class="form-group col-lg-12">
-                        <input class="input-group" type="text" id="description" placeholder="Enter search term" required>
-                        <button type="submit" id="getGifs" class="btn btn-primary">Search!</button>
-                        <button id="remove" class="btn btn-danger my-2">Remove Gifs</button>
+                        <form>
+                            <input class="input-group" type="text" id="inputvalue" placeholder="Enter search term" required>
+                            <button type="submit" id="getGifs" class="btn btn-primary">Search!</button>
+                            <button id="remove" class="btn btn-danger my-2">Remove Gifs</button>
+                        </form>   
                     </div>  
                 </div>  
             </div>  
@@ -31,5 +33,6 @@
     </div>
     <script src="https://unpkg.com/axios/dist/axios.js"></script>
     <script src="giphy.js"></script>
+    <script src="gif.js"></script>
 </body>
 </html>
