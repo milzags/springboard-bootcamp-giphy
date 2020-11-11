@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     let theForm = document.querySelector('form');
 
-    theForm.addEventListener('click', async function(event) {
+    theForm.addEventListener('click', async  function(event) {
         event.preventDefault();
         let searchTerm = formInput.value;
         formInput.value = '';
