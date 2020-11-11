@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    let theForm = document.querySelector('form');
+    let theForm = document.getElementById('#gifsearch');
 
     theForm.addEventListener('click', async  function(event) {
         event.preventDefault();
