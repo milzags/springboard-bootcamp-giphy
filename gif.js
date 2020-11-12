@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    let theForm = document.getElementById('gifsearch');
+    let theForm = document.getElementById('inputvalue');
+    
 
     theForm.addEventListener('submit', async function(event) {
         event.preventDefault();
@@ -36,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         addGif(response.data);
     })
+
+    let remove = document.getElementById('remove');
+    remove.addEventListener('click', function () {
+    gifsLocation.target.parentNode.remove();
+    })
+
 
 });
 
