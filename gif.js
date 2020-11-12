@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    
     // get element where gifs will be posted:
     let gifsLocation = document.getElementById('gifs')
     // get search input
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             let randInd = Math.floor(Math.random() * numResults);
             let newDiv = document.createElement('div');
             let newGif = document.createElement('img');
-            newGif.setAttribute('src', res.data[randInd].images.original.url);
+            newGif.setAttribute('src', response.data[randInd].images.original.url);
             newDiv.append(gifsLocation);
             newGif.append(newDiv);
         }
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     let theForm = document.getElementById('gifsearch');
 
-    theForm.addEventListener('click', async  function(event) {
+    theForm.addEventListener('submit', async function(event) {
         event.preventDefault();
         let searchTerm = formInput.value;
         formInput.value = '';
@@ -33,11 +33,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 api_key : "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym"
             }
         });
+
         addGif(response.data);
     })
 
-
 });
 
-// pick the div where the figs will be stored
-//pick the search input via querySelector
