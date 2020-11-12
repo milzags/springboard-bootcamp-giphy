@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
     // get element where gifs will be posted:
-    let gifsLocation = document.getElementById('#gifs')
+    let gifsLocation = document.getElementById('gifs')
     // get search input
-    let formInput = document.getElementById('#inputvalue');
+    let formInput = document.querySelector('#inputvalue');
 
     function addGif(response) {
         //loop through the search term results and pick a gif at random
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    let theForm = document.getElementById('#gifsearch');
+    let theForm = document.getElementById('gifsearch');
 
     theForm.addEventListener('click', async  function(event) {
         event.preventDefault();
@@ -38,3 +38,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 });
+
+// pick the div where the figs will be stored
+//pick the search input via querySelector
