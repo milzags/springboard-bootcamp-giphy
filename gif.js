@@ -16,14 +16,16 @@ document.addEventListener('DOMContentLoaded', (ev) => {
             //create a new div element to add to the DOM in the 
             //div with #gifs id
             let newDiv = document.createElement('DIV');
+            newDiv.classList.add('col-md-12');
+            newDiv.classList.add('text-center');
             //create a new gif image element
             let newGif = document.createElement('IMG');
             //set the source of the new IMG element, from the API
             newGif.setAttribute('src', response.data[randInd].images.original.url);
             // add the new div to the gifs container
-            newDiv.appendChild(gifsLocation);
+            gifsLocation.append(newDiv);
             // add the new gif to the newDiv
-            newGif.appendChild(newDiv);
+            newDiv.append(newGif);
         }
     }
 
