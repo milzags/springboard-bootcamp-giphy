@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (ev) => {
     // get element where gifs will be posted:
     let gifsLocation = document.getElementById('gifs')
     // get search input
-    let formInput = document.querySelector('#inputvalue');
+    let formInput = document.getElementById('inputvalue');
 
     function addGif(response) {
         //loop through the search term results and pick a gif at random
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', (ev) => {
     }
 
     //pick the submit form
-    let theForm = document.getElementById('inputvalue');
+    let theForm = document.getElementById('giphy');
     
     // add event listener on form submission with async callback function
     // prevent default behaviour of page refresh
