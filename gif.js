@@ -54,10 +54,14 @@ document.addEventListener('DOMContentLoaded', (ev) => {
         addGif(response.data);
     })
 
-    // let remove = document.getElementById('remove');
-    // remove.addEventListener('click', function () {
-    // gifsLocation.target.parentNode.remove();
+    //create functionality for remove button
+    //pick the remove button via ID
+    //prevent page refresh behavior
+    //set the innerHTML to the gif container to an empty string
+    let remove = document.getElementById('remove');
+    remove.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        gifsLocation.innerHTML ='';
+    
+    });
 });
-
-
-
