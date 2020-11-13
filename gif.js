@@ -21,20 +21,26 @@ document.addEventListener('DOMContentLoaded', (ev) => {
             //set the source of the new IMG element, from the API
             newGif.setAttribute('src', response.data[randInd].images.original.url);
             // add the new div to the gifs container
-            newDiv.append(gifsLocation);
+            newDiv.appendChild(gifsLocation);
             // add the new gif to the newDiv
-            newGif.append(newDiv);
+            newGif.appendChild(newDiv);
         }
     }
 
+    //pick the submit form
     let theForm = document.getElementById('inputvalue');
     
-
+    // add event listener on form submission with async callback function
+    // prevent default behaviour of page refresh
     theForm.addEventListener('submit', async function(event) {
         event.preventDefault();
+        // the GET search term is set to the form input's value, then 
+        // set to an empty string to clear it once you've clicked submit
         let searchTerm = formInput.value;
         formInput.value = '';
 
+        //promise to get data from the API via the search term and the 
+        //API_key provided.         
         const response = await axios.get('http://api.giphy.com/v1/gifs/search', { 
             params: {
                 q: searchTerm,
@@ -42,15 +48,14 @@ document.addEventListener('DOMContentLoaded', (ev) => {
             }
         });
 
+        //call the addGif function with the data from the response.
         addGif(response.data);
     })
 
-    let remove = document.getElementById('remove');
-    remove.addEventListener('click', function () {
-    gifsLocation.target.parentNode.remove();
-    })
-
-
+    // let remove = document.getElementById('remove');
+    // remove.addEventListener('click', function () {
+    // gifsLocation.target.parentNode.remove();
 });
+
 
 
