@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', (ev) => {
     let remove = document.getElementById('remove');
     remove.addEventListener('click', function (ev) {
         ev.preventDefault();
-        gifsLocation.innerHTML ='';
+        gifsLocation.textContent = '';
     
     });
 });
